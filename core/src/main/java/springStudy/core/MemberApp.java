@@ -8,8 +8,11 @@ import springStudy.core.member.MemberServiceImpl;
 public class MemberApp {
     public static void main(String[] args) {
 
+        //AppConfig에서 구현체 결정
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+
         //회원 가입 테이스
-        MemberService memberService = new MemberServiceImpl();
         Member member1 = new Member(1L, "홍길동", Grade.VIP);
         memberService.join(member1); //회원가입
 
