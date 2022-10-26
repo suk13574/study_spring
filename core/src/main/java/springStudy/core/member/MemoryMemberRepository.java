@@ -1,8 +1,11 @@
 package springStudy.core.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class MemoryMemberRepository implements MemberRepository{
 
     //HashMap : 동시성 이슈가 있을 수 있다.
