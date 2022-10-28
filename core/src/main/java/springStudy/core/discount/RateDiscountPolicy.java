@@ -1,5 +1,6 @@
 package springStudy.core.discount;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import springStudy.core.member.Grade;
 import springStudy.core.member.Member;
@@ -7,6 +8,7 @@ import springStudy.core.member.MemberService;
 import springStudy.core.member.MemberServiceImpl;
 
 @Component
+@Qualifier("mainDiscountPolicy")
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;
